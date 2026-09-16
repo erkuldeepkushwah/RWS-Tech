@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useApp } from '@/context/AppContext';
 import { COURSES_DATA } from '@/data/courses';
-import { CourseDetailsView } from '@/app/CourseDetailsView';
+import { CourseDetailsView } from '@/app/courses/[slug]/CourseDetailsView';
 
 export default function CourseDetailsClient({ courseKey }: { courseKey: string }) {
   const { selectedCourseId, selectCourse } = useApp();
