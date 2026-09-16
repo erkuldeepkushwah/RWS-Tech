@@ -16,13 +16,9 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-interface AuthViewProps {
-  initialMode?: 'login' | 'register';
-}
-
-export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
+export default function LoginPage() {
   const { login, register, loginAsDemoUser, navigateTo, addToast } = useApp();
-  const [mode, setMode] = useState<'login' | 'register'>(initialMode);
+  const [mode, setMode] = useState<'login' | 'register'>('login');
 
   // Form Fields
   const [fullName, setFullName] = useState('');
