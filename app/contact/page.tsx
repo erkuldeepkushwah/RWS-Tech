@@ -83,9 +83,9 @@ export default function ContactPage() {
   return (
     <div id="contact-view" className="space-y-16 pb-20">
       {/* Header Banner */}
-      <section className="bg-gradient-to-b from-purple-50 via-white to-slate-50 border-b border-purple-100/80 py-14">
+      <section className="bg-gradient-to-b from-blue-50 via-white to-slate-50 border-b border-blue-100/80 py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Connect With RWS Tech
           </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
               <div className="space-y-4 text-xs">
                 {/* Email */}
                 <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
-                  <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
 
                 {/* Phone */}
                 <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
 
                 {/* Office */}
                 <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
-                  <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -158,17 +158,17 @@ export default function ContactPage() {
             </div>
 
             {/* Quick FAQ summary */}
-            <div className="bg-gradient-to-br from-purple-900 to-indigo-950 text-white rounded-3xl p-6 space-y-3 shadow-lg">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-purple-200">
+            <div className="bg-gradient-to-br from-[#0B192C] to-[#081021] text-white rounded-3xl p-6 space-y-3 shadow-lg">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-200">
                 Direct WhatsApp Channel
               </span>
               <h3 className="text-base font-bold">Fast-Track Enrollment Support</h3>
-              <p className="text-xs text-purple-100 leading-relaxed">
+              <p className="text-xs text-blue-100 leading-relaxed">
                 Need immediate course syllabus consultation or fee invoice assistance? Ping our admissions counselors directly.
               </p>
               <button
                 onClick={() => addToast('WhatsApp Connected', 'Opening WhatsApp academic counselor chat...', 'info')}
-                className="w-full py-2.5 rounded-xl bg-white text-purple-950 text-xs font-bold hover:bg-purple-50 transition-colors shadow-sm"
+                className="w-full py-2.5 rounded-xl bg-white text-blue-900 text-xs font-bold hover:bg-blue-50 transition-colors shadow-sm"
               >
                 Chat on WhatsApp (+91 98765 43210)
               </button>
@@ -180,7 +180,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
               <div className="space-y-1">
                 <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-purple-600" />
+                  <MessageSquare className="w-5 h-5 text-blue-600" />
                   Send Us a Message
                 </h2>
                 <p className="text-xs text-slate-500">
@@ -200,7 +200,7 @@ export default function ContactPage() {
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Aditi Roy"
                       className={`w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                        errors.name ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                        errors.name ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                       }`}
                     />
                     {errors.name && <p className="text-[10px] text-rose-600">{errors.name}</p>}
@@ -216,7 +216,7 @@ export default function ContactPage() {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="aditi@example.com"
                       className={`w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                        errors.email ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                        errors.email ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                       }`}
                     />
                     {errors.email && <p className="text-[10px] text-rose-600">{errors.email}</p>}
@@ -233,7 +233,7 @@ export default function ContactPage() {
                     onChange={(e) => setSubject(e.target.value)}
                     placeholder="e.g. Question regarding MERN Stack curriculum & certificate"
                     className={`w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                      errors.subject ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                      errors.subject ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                     }`}
                   />
                   {errors.subject && <p className="text-[10px] text-rose-600">{errors.subject}</p>}
@@ -249,7 +249,7 @@ export default function ContactPage() {
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Provide details about your background, career goal, or inquiry..."
                     className={`w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                      errors.message ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                      errors.message ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                     }`}
                   />
                   {errors.message && <p className="text-[10px] text-rose-600">{errors.message}</p>}
@@ -260,7 +260,7 @@ export default function ContactPage() {
                   id="contact-submit-btn"
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 px-6 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-md shadow-purple-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full py-3 px-6 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-md shadow-blue-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <span>Sending your inquiry...</span>
