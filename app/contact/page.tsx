@@ -1,4 +1,4 @@
-import { ContactView } from '@/components/views/ContactView';
+import { ContactView } from '@/app/ContactView';
 
 export default function ContactPage() {
   return <ContactView />;

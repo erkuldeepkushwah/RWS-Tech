@@ -1,4 +1,4 @@
-import { PurchaseView } from '@/components/views/PurchaseView';
+import { PurchaseView } from '@/app/PurchaseView';
 
 export default function PurchasePage() {
   return <PurchaseView />;

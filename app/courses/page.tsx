@@ -1,4 +1,4 @@
-import { CoursesView } from '@/components/views/CoursesView';
+import { CoursesView } from '@/app/CoursesView';
 
 export default function CoursesPage() {
   return <CoursesView />;
