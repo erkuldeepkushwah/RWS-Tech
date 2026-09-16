@@ -1,5 +1,5 @@
-import { RwsTechApp } from '@/components/RwsTechApp';
+import { HomeView } from '@/components/views/HomeView';
 
-export default function Page() {
-  return <RwsTechApp />;
+export default function HomePage() {
+  return <HomeView />;
 }
