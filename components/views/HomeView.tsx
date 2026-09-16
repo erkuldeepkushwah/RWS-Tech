@@ -32,10 +32,10 @@ export function HomeView() {
       : COURSES_DATA.filter((c) => c.category === activeCategory).slice(0, 8);
 
   const stats = [
-    { label: 'Industry Courses', value: '24+', sub: 'Comprehensive Skill Tracks', icon: <BookOpen className="w-5 h-5 text-purple-600" /> },
-    { label: 'Active Students', value: '1000+', sub: 'Learners & Graduates', icon: <Users className="w-5 h-5 text-indigo-600" /> },
-    { label: 'Real Projects', value: '50+', sub: 'Production-Ready Builds', icon: <Code2 className="w-5 h-5 text-purple-600" /> },
-    { label: 'Expert Mentors', value: '15+', sub: 'From Leading IT Companies', icon: <GraduationCap className="w-5 h-5 text-indigo-600" /> },
+    { label: 'Industry Courses', value: '24+', sub: 'Comprehensive Tech Tracks', icon: <BookOpen className="w-5 h-5 text-purple-600" /> },
+    { label: 'Active Students', value: '1000+', sub: 'Trained & Upskilled', icon: <Users className="w-5 h-5 text-indigo-600" /> },
+    { label: 'Real Projects', value: '50+', sub: 'Production Portfolio Builds', icon: <Code2 className="w-5 h-5 text-purple-600" /> },
+    { label: 'Expert Mentors', value: '15+', sub: 'From Leading IT Enterprises', icon: <GraduationCap className="w-5 h-5 text-indigo-600" /> },
   ];
 
   const pillars = [
@@ -46,8 +46,13 @@ export function HomeView() {
     },
     {
       title: 'Industry-Focused Courses',
-      desc: 'Curriculums continuously updated for current enterprise demands in AWS, Azure, DevOps, React, and Generative AI.',
+      desc: 'Curriculums continuously updated for current enterprise demands in React, Next.js, Cloud, and Generative AI.',
       icon: <Briefcase className="w-6 h-6 text-purple-600" />,
+    },
+    {
+      title: 'Beginner-Friendly Learning',
+      desc: 'Gentle step-by-step progressions with 0-to-1 foundations in programming logic, HTML/CSS, and algorithms.',
+      icon: <Users className="w-6 h-6 text-purple-600" />,
     },
     {
       title: 'Project-Based Learning',
@@ -56,7 +61,7 @@ export function HomeView() {
     },
     {
       title: 'Career & Job-Oriented Skills',
-      desc: 'Resume optimization, mock technical interview drill-downs, and DSA preparation for job-ready confidence.',
+      desc: 'Resume optimization, mock technical interview drill-downs, and verifiably accredited completion credentials.',
       icon: <Award className="w-6 h-6 text-purple-600" />,
     },
   ];
@@ -79,9 +84,9 @@ export function HomeView() {
               {/* Trust Badge / Pill */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/90 border border-purple-200 text-purple-800 text-xs font-semibold shadow-2xs">
                 <Sparkles className="w-3.5 h-3.5 text-purple-600 animate-pulse" />
-                <span>Next Generation Online Tech Academy</span>
+                <span>Next-Generation Online Tech Academy</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                <span className="text-purple-700 font-bold">2020 Batch Enrolling</span>
+                <span className="text-purple-700 font-bold">2026 Batch Enrolling</span>
               </div>
 
               {/* Large Heading */}
@@ -138,7 +143,7 @@ export function HomeView() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
-                  <span>1 on 1 Code Mentorship</span>
+                  <span>1-on-1 Code Mentorship</span>
                 </div>
               </div>
             </div>
@@ -150,7 +155,7 @@ export function HomeView() {
                 <div className="relative aspect-4/3 sm:aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-purple-100 bg-slate-900 group">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=1000&q=80"
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
                     alt="RWS Tech modern technology education workspace"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
                   />
@@ -158,7 +163,7 @@ export function HomeView() {
 
                   <div className="absolute bottom-5 left-5 right-5 text-white">
                     <p className="text-xs font-semibold text-purple-200 uppercase tracking-wider">Live Classroom Experience</p>
-                    <p className="text-base font-bold mt-0.5">Empowering Tomorrow's Software Engineers</p>
+                    <p className="text-base font-bold mt-0.5">Empowering Tomorrow&apos;s Software Engineers</p>
                   </div>
                 </div>
 
@@ -176,7 +181,7 @@ export function HomeView() {
                   <pre className="text-[11px] font-mono leading-tight text-purple-300">
                     <code>
                       <span className="text-pink-400">const</span> career = &#123;<br />
-                      &nbsp;&nbsp;skills: [<span className="text-emerald-300">'React'</span>, <span className="text-emerald-300">'Node'</span>],<br />
+                      &nbsp;&nbsp;skills: [<span className="text-emerald-300">&apos;React&apos;</span>, <span className="text-emerald-300">&apos;Node&apos;</span>],<br />
                       &nbsp;&nbsp;ready: <span className="text-indigo-400">true</span><br />
                       &#125;;
                     </code>
@@ -239,7 +244,7 @@ export function HomeView() {
         <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-10 lg:p-12 shadow-sm space-y-10">
           <div className="max-w-3xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider">
-              About RWSTECH
+              About RWS Tech
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
               Practical Technology Education Built for Real-World Industry Demands
@@ -271,10 +276,10 @@ export function HomeView() {
             {/* Quick Action Box */}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white flex flex-col justify-between space-y-4">
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-purple-200">Start Today!</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-purple-200">Start Today</span>
                 <h3 className="text-xl font-bold">Ready to Upskill with RWS Tech?</h3>
                 <p className="text-xs text-purple-100 leading-relaxed">
-                  Join over 1000+ learners and get instant access to 34+ Industry-mapped learning experiences.
+                  Join our vibrant cohort of 1,000+ students and get instant access to 24+ courses.
                 </p>
               </div>
               <button
@@ -356,7 +361,7 @@ export function HomeView() {
               </p>
               <div className="flex flex-wrap gap-4 pt-2 text-xs text-purple-200">
                 <span className="flex items-center gap-1.5">✓ Lifetime Course Access</span>
-                <span className="flex items-center gap-1.5">✓ Industry Certificates</span>
+                <span className="flex items-center gap-1.5">✓ Industry Certificate</span>
                 <span className="flex items-center gap-1.5">✓ 50+ Real Projects</span>
                 <span className="flex items-center gap-1.5">✓ 24/7 Community Support</span>
               </div>
