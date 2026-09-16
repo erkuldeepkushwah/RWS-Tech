@@ -23,10 +23,10 @@ export default function AboutPage() {
   const { navigateTo } = useApp();
 
   const stats = [
-    { label: 'Industry Courses', value: '24+', sub: 'Web, Mobile, AI & Programming', icon: <BookOpen className="w-6 h-6 text-purple-600" /> },
-    { label: 'Graduated Students', value: '1000+', sub: 'Trained & Upskilled Globally', icon: <Users className="w-6 h-6 text-indigo-600" /> },
-    { label: 'Real Projects', value: '50+', sub: 'Production Capstone Builds', icon: <Code2 className="w-6 h-6 text-purple-600" /> },
-    { label: 'Expert Mentors', value: '15+', sub: 'Architects from Top IT Hubs', icon: <GraduationCap className="w-6 h-6 text-indigo-600" /> },
+    { label: 'Industry Courses', value: '24+', sub: 'Web, Mobile, AI & Programming', icon: <BookOpen className="w-6 h-6 text-blue-600" /> },
+    { label: 'Graduated Students', value: '1000+', sub: 'Trained & Upskilled Globally', icon: <Users className="w-6 h-6 text-blue-600" /> },
+    { label: 'Real Projects', value: '50+', sub: 'Production Capstone Builds', icon: <Code2 className="w-6 h-6 text-blue-600" /> },
+    { label: 'Expert Mentors', value: '15+', sub: 'Architects from Top IT Hubs', icon: <GraduationCap className="w-6 h-6 text-blue-600" /> },
   ];
 
   const mentors = [
@@ -63,9 +63,9 @@ export default function AboutPage() {
   return (
     <div id="about-view" className="space-y-16 pb-20">
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-purple-50 via-white to-slate-50 border-b border-purple-100/80 py-16">
+      <section className="bg-gradient-to-b from-blue-50 via-white to-slate-50 border-b border-blue-100/80 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             About RWS Tech
           </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
               key={idx}
               className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md flex items-center gap-4"
             >
-              <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0">
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                 {stat.icon}
               </div>
               <div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
       {/* Core Educational Pillars */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-700">Our Core Principles</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600">Our Core Principles</span>
           <h2 className="text-3xl font-black text-slate-900 tracking-tight">
             Why Students Excel at RWS Tech
           </h2>
@@ -114,7 +114,7 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
               <Terminal className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Practical Technology Education</h3>
@@ -125,7 +125,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
               <Briefcase className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Industry-Focused Courses</h3>
@@ -147,7 +147,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
               <Code2 className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Project-Based Learning</h3>
@@ -158,7 +158,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
               <Award className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">Career & Job-Oriented Skills</h3>
@@ -168,17 +168,17 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-purple-800 to-indigo-900 text-white shadow-md flex flex-col justify-between space-y-4">
+          <div className="p-8 rounded-3xl bg-gradient-to-br from-[#0B192C] to-[#081021] text-white shadow-md flex flex-col justify-between space-y-4">
             <div className="space-y-2">
-              <span className="text-xs font-bold text-purple-200 uppercase tracking-wider">Start Today</span>
+              <span className="text-xs font-bold text-blue-200 uppercase tracking-wider">Start Today</span>
               <h3 className="text-xl font-bold">Empowering 1000+ Students</h3>
-              <p className="text-xs text-purple-100 leading-relaxed">
+              <p className="text-xs text-blue-100 leading-relaxed">
                 Join our supportive global community and advance your software engineering journey.
               </p>
             </div>
             <button
               onClick={() => navigateTo('courses')}
-              className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-purple-900 bg-white hover:bg-purple-50 transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-blue-800 bg-white hover:bg-blue-50 transition-colors flex items-center justify-center gap-2"
             >
               Explore Course Tracks
               <ArrowRight className="w-3.5 h-3.5" />
@@ -190,7 +190,7 @@ export default function AboutPage() {
       {/* Expert Mentors Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center max-w-xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-700">The Faculty</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-600">The Faculty</span>
           <h2 className="text-3xl font-black text-slate-900 tracking-tight">Meet Your Expert Mentors</h2>
           <p className="text-sm text-slate-600">
             Learn directly from practitioners who design enterprise systems for a living.
@@ -207,14 +207,14 @@ export default function AboutPage() {
               <img
                 src={m.avatar}
                 alt={m.name}
-                className="w-20 h-20 rounded-full object-cover border-2 border-purple-200 shadow-sm"
+                className="w-20 h-20 rounded-full object-cover border-2 border-blue-200 shadow-sm"
               />
               <div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
                   {m.badge}
                 </span>
                 <h4 className="text-base font-bold text-slate-900 mt-2">{m.name}</h4>
-                <p className="text-xs text-purple-700 font-medium">{m.role}</p>
+                <p className="text-xs text-blue-600 font-medium">{m.role}</p>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed">{m.bio}</p>
             </div>
