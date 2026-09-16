@@ -399,7 +399,7 @@ export default function DashboardPage() {
                   <div>
                     <h2 className="text-xl font-bold text-slate-900">Purchased Courses / My Learning</h2>
                     <p className="text-xs text-slate-500">
-                      Click "Continue Learning" to open the interactive syllabus and code labs.
+                      Click &#34;Continue Learning&#34; to open the interactive syllabus and code labs.
                     </p>
                   </div>
                   <span className="text-xs font-bold px-3 py-1 rounded-full bg-purple-100 text-purple-800">
@@ -678,7 +678,7 @@ export default function DashboardPage() {
                     <Receipt className="w-10 h-10 text-slate-400 mx-auto" />
                     <p className="text-sm font-bold text-slate-800">No Transactions Found</p>
                     <p className="text-xs text-slate-500">
-                      No payments found with status "{paymentFilter}".
+                      No payments found with status &#34;{paymentFilter}&#34;.
                     </p>
                   </div>
                 )}
