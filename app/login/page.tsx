@@ -123,7 +123,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
               }}
               className={`py-2 rounded-xl transition-all ${
                 mode === 'login'
-                  ? 'bg-white text-purple-900 shadow-xs'
+                  ? 'bg-white text-blue-800 shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -138,7 +138,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
               }}
               className={`py-2 rounded-xl transition-all ${
                 mode === 'register'
-                  ? 'bg-white text-purple-900 shadow-xs'
+                  ? 'bg-white text-blue-800 shadow-xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -160,7 +160,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="Aryan Verma"
                     className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                      errors.fullName ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                      errors.fullName ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                     }`}
                   />
                 </div>
@@ -185,7 +185,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="student@example.com"
                   className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                    errors.email ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                    errors.email ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                   }`}
                 />
               </div>
@@ -209,7 +209,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   className={`w-full pl-10 pr-10 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
-                    errors.password ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-purple-600'
+                    errors.password ? 'border-rose-400 bg-rose-50/40' : 'border-slate-200 focus:border-blue-600'
                   }`}
                 />
                 <button
@@ -244,7 +244,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
                     className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs bg-slate-50 border focus:bg-white focus:outline-hidden transition-all text-slate-800 ${
                       errors.confirmPassword
                         ? 'border-rose-400 bg-rose-50/40'
-                        : 'border-slate-200 focus:border-purple-600'
+                        : 'border-slate-200 focus:border-blue-600'
                     }`}
                   />
                 </div>
@@ -262,7 +262,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
               id={mode === 'login' ? 'auth-login-submit-btn' : 'auth-register-submit-btn'}
               type="submit"
               disabled={isLoading}
-              className="w-full py-3 px-4 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-md shadow-purple-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full py-3 px-4 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-md shadow-blue-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {isLoading ? (
                 <span>Processing...</span>
@@ -290,7 +290,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
                     setMode('register');
                     setErrors({});
                   }}
-                  className="font-bold text-purple-700 hover:underline"
+                  className="font-bold text-blue-600 hover:underline"
                 >
                   Register
                 </button>
@@ -303,7 +303,7 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
                     setMode('login');
                     setErrors({});
                   }}
-                  className="font-bold text-purple-700 hover:underline"
+                  className="font-bold text-blue-600 hover:underline"
                 >
                   Login
                 </button>
@@ -312,19 +312,19 @@ export default function LoginPage({ initialMode = 'login' }: AuthViewProps) {
           </div>
 
           {/* Quick Demo Login Option */}
-          <div className="p-3.5 rounded-2xl bg-purple-50/80 border border-purple-200 text-center space-y-2">
-            <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-purple-900">
-              <Sparkles className="w-3.5 h-3.5 text-purple-600" />
+          <div className="p-3.5 rounded-2xl bg-blue-50/80 border border-blue-200 text-center space-y-2">
+            <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-blue-800">
+              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
               Quick Demo Access
             </div>
-            <p className="text-[11px] text-purple-700">
+            <p className="text-[11px] text-blue-600">
               One-click sign in as active student Aryan Verma with preloaded enrolled courses.
             </p>
             <button
               id="demo-login-quick-btn"
               type="button"
               onClick={loginAsDemoUser}
-              className="w-full py-2 px-3 rounded-xl bg-white hover:bg-purple-100/60 border border-purple-300 text-purple-900 text-xs font-bold transition-colors shadow-2xs"
+              className="w-full py-2 px-3 rounded-xl bg-white hover:bg-blue-100/60 border border-blue-300 text-blue-800 text-xs font-bold transition-colors shadow-2xs"
             >
               Sign In as Demo Student
             </button>
