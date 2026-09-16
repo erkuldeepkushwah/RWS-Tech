@@ -24,7 +24,7 @@ export function CourseCard({ course }: CourseCardProps) {
   return (
     <div
       id={`course-card-${course.id}`}
-      className="group flex flex-col bg-white rounded-2xl border border-slate-200/90 hover:border-purple-300 shadow-xs hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 overflow-hidden"
+      className="group flex flex-col bg-white rounded-2xl border border-slate-200/90 hover:border-blue-300 shadow-xs hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 overflow-hidden"
     >
       {/* Course Banner Image & Badges */}
       <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
@@ -39,11 +39,11 @@ export function CourseCard({ course }: CourseCardProps) {
 
         {/* Category Pill */}
         <div className="absolute top-3 left-3 flex items-center gap-1.5">
-          <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/95 text-purple-900 shadow-xs backdrop-blur-xs">
+          <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-white/95 text-blue-800 shadow-xs backdrop-blur-xs">
             {course.category}
           </span>
           {course.badge && (
-            <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xs">
+            <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-gradient-to-r from-blue-600 to-blue-600 text-white shadow-xs">
               {course.badge}
             </span>
           )}
@@ -73,7 +73,7 @@ export function CourseCard({ course }: CourseCardProps) {
       {/* Card Body */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div>
-          <h3 className="text-lg font-bold text-slate-900 group-hover:text-purple-700 transition-colors line-clamp-1">
+          <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
             {course.title}
           </h3>
           <p className="text-xs text-slate-600 mt-1.5 leading-relaxed line-clamp-2">
@@ -83,7 +83,7 @@ export function CourseCard({ course }: CourseCardProps) {
           {/* Key Metrics: Duration & Students */}
           <div className="flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-100 mt-3">
             <span className="flex items-center gap-1.5 font-medium">
-              <Clock className="w-3.5 h-3.5 text-purple-600" />
+              <Clock className="w-3.5 h-3.5 text-blue-600" />
               {course.duration}
             </span>
             <span className="flex items-center gap-1.5 font-medium">
@@ -113,7 +113,7 @@ export function CourseCard({ course }: CourseCardProps) {
             <button
               id={`view-course-btn-${course.id}`}
               onClick={() => navigateTo('course-details', course.id)}
-              className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-purple-800 bg-purple-50 hover:bg-purple-100 border border-purple-200/80 transition-colors flex items-center justify-center gap-1"
+              className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-200/80 transition-colors flex items-center justify-center gap-1"
             >
               View Course
               <ArrowRight className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ export function CourseCard({ course }: CourseCardProps) {
               <button
                 id={`purchase-course-btn-${course.id}`}
                 onClick={() => initiatePurchase(course.id)}
-                className="w-full py-2 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-purple-700 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-xs shadow-purple-600/20 transition-all flex items-center justify-center gap-1"
+                className="w-full py-2 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-xs shadow-blue-600/20 transition-all flex items-center justify-center gap-1"
               >
                 <ShoppingCart className="w-3.5 h-3.5" />
                 Purchase
