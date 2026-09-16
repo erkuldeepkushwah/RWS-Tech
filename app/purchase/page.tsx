@@ -120,7 +120,7 @@ export default function PurchasePage() {
       <div className="flex items-center justify-between">
         <button
           onClick={() => navigateTo('course-details', course.id)}
-          className="text-xs font-semibold text-purple-700 hover:underline flex items-center gap-1"
+          className="text-xs font-semibold text-blue-600 hover:underline flex items-center gap-1"
         >
           ← Return to Course Details
         </button>
@@ -165,7 +165,7 @@ export default function PurchasePage() {
             </div>
             <div className="flex justify-between py-1 border-b border-slate-200">
               <span className="text-slate-500">Amount Paid:</span>
-              <span className="font-bold text-purple-700">₹{pendingRecord.amount.toLocaleString()}</span>
+              <span className="font-bold text-blue-600">₹{pendingRecord.amount.toLocaleString()}</span>
             </div>
             <div className="flex justify-between py-1 border-b border-slate-200">
               <span className="text-slate-500">Payment Channel:</span>
@@ -197,7 +197,7 @@ export default function PurchasePage() {
             <button
               id="view-payment-history-btn"
               onClick={() => navigateTo('dashboard', undefined, 'payment-history')}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold shadow-md shadow-purple-600/20 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-600/20 flex items-center justify-center gap-2"
             >
               <Receipt className="w-4 h-4" />
               View in Payment History
@@ -220,15 +220,15 @@ export default function PurchasePage() {
               <h2 className="text-lg font-bold text-slate-900">Order Summary</h2>
 
               {/* Selected Course Card */}
-              <div className="flex items-center gap-4 p-3.5 rounded-2xl bg-purple-50/50 border border-purple-100">
+              <div className="flex items-center gap-4 p-3.5 rounded-2xl bg-blue-50/50 border border-blue-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-16 h-16 rounded-xl object-cover border border-purple-200 shrink-0"
+                  className="w-16 h-16 rounded-xl object-cover border border-blue-200 shrink-0"
                 />
                 <div className="min-w-0">
-                  <span className="text-[10px] font-bold text-purple-700 uppercase tracking-wider">
+                  <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">
                     {course.category}
                   </span>
                   <h3 className="text-sm font-bold text-slate-900 truncate">{course.title}</h3>
@@ -245,7 +245,7 @@ export default function PurchasePage() {
                   value={userEmail}
                   onChange={(e) => setUserEmail(e.target.value)}
                   placeholder="name@domain.com"
-                  className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:bg-white focus:outline-hidden focus:border-purple-600 text-slate-800"
+                  className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:bg-white focus:outline-hidden focus:border-blue-600 text-slate-800"
                 />
                 <p className="text-[10px] text-slate-400">
                   Course enrollment credentials and invoice will be registered to this account.
@@ -270,7 +270,7 @@ export default function PurchasePage() {
                 </div>
                 <div className="border-t border-slate-200 pt-3 flex items-baseline justify-between">
                   <span className="text-sm font-bold text-slate-900">Total Payable</span>
-                  <span className="text-2xl font-black text-purple-700">
+                  <span className="text-2xl font-black text-blue-600">
                     ₹{totalPayable.toLocaleString()}
                   </span>
                 </div>
@@ -307,8 +307,8 @@ export default function PurchasePage() {
                     onClick={() => setSelectedMethod('UPI')}
                     className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center justify-center gap-1.5 ${
                       selectedMethod === 'UPI'
-                        ? 'border-purple-600 bg-purple-50/80 ring-2 ring-purple-600/30 font-bold text-purple-900 shadow-xs'
-                        : 'border-slate-200 hover:border-purple-200 hover:bg-slate-50 text-slate-700'
+                        ? 'border-blue-600 bg-blue-50/80 ring-2 ring-blue-600/30 font-bold text-blue-800 shadow-xs'
+                        : 'border-slate-200 hover:border-blue-200 hover:bg-slate-50 text-slate-700'
                     }`}
                   >
                     <div className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-xs">
@@ -324,11 +324,11 @@ export default function PurchasePage() {
                     onClick={() => setSelectedMethod('PhonePe')}
                     className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center justify-center gap-1.5 ${
                       selectedMethod === 'PhonePe'
-                        ? 'border-purple-600 bg-purple-50/80 ring-2 ring-purple-600/30 font-bold text-purple-900 shadow-xs'
-                        : 'border-slate-200 hover:border-purple-200 hover:bg-slate-50 text-slate-700'
+                        ? 'border-blue-600 bg-blue-50/80 ring-2 ring-blue-600/30 font-bold text-blue-800 shadow-xs'
+                        : 'border-slate-200 hover:border-blue-200 hover:bg-slate-50 text-slate-700'
                     }`}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs">
+                    <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">
                       Pe
                     </div>
                     <span className="text-xs">PhonePe</span>
@@ -341,8 +341,8 @@ export default function PurchasePage() {
                     onClick={() => setSelectedMethod('Paytm')}
                     className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center justify-center gap-1.5 ${
                       selectedMethod === 'Paytm'
-                        ? 'border-purple-600 bg-purple-50/80 ring-2 ring-purple-600/30 font-bold text-purple-900 shadow-xs'
-                        : 'border-slate-200 hover:border-purple-200 hover:bg-slate-50 text-slate-700'
+                        ? 'border-blue-600 bg-blue-50/80 ring-2 ring-blue-600/30 font-bold text-blue-800 shadow-xs'
+                        : 'border-slate-200 hover:border-blue-200 hover:bg-slate-50 text-slate-700'
                     }`}
                   >
                     <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">
@@ -360,11 +360,11 @@ export default function PurchasePage() {
                     ? 'bg-rose-50 border-rose-200 text-rose-900'
                     : timeLeft <= 60
                     ? 'bg-amber-50 border-amber-200 text-amber-900'
-                    : 'bg-purple-50/70 border-purple-200 text-purple-900'
+                    : 'bg-blue-50/70 border-blue-200 text-blue-800'
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <Clock className={`w-4 h-4 ${timerExpired ? 'text-rose-600 animate-bounce' : 'text-purple-700'}`} />
+                  <Clock className={`w-4 h-4 ${timerExpired ? 'text-rose-600 animate-bounce' : 'text-blue-600'}`} />
                   <div>
                     <p className="text-xs font-bold">
                       {timerExpired ? 'Payment Session Expired' : 'Complete Payment Within'}
@@ -377,7 +377,7 @@ export default function PurchasePage() {
                   <span
                     id="payment-countdown-timer"
                     className={`text-xl font-mono font-black ${
-                      timerExpired ? 'text-rose-600' : 'text-purple-800'
+                      timerExpired ? 'text-rose-600' : 'text-blue-700'
                     }`}
                   >
                     {timerExpired ? '00:00' : formatTimer(timeLeft)}
@@ -398,7 +398,7 @@ export default function PurchasePage() {
                   <button
                     type="button"
                     onClick={handleResetSession}
-                    className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 shadow-md transition-all flex items-center justify-center gap-2 mx-auto"
+                    className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-md transition-all flex items-center justify-center gap-2 mx-auto"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                     Restart 5-Minute Session
@@ -410,7 +410,7 @@ export default function PurchasePage() {
                   {/* Dynamic QR Box */}
                   <div className="flex flex-col sm:flex-row items-center gap-6 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                     {/* Render Clean Vector SVG QR Code with UPI Branding */}
-                    <div className="w-44 h-44 rounded-2xl bg-white p-3 border-2 border-purple-200 shadow-md flex flex-col items-center justify-center relative shrink-0">
+                    <div className="w-44 h-44 rounded-2xl bg-white p-3 border-2 border-blue-200 shadow-md flex flex-col items-center justify-center relative shrink-0">
                       <svg
                         className="w-full h-full text-slate-900"
                         viewBox="0 0 100 100"
@@ -471,7 +471,7 @@ export default function PurchasePage() {
                     {/* QR Details */}
                     <div className="space-y-2.5 text-xs text-slate-700 flex-1">
                       <div>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-purple-700">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600">
                           Scan & Pay via {selectedMethod}
                         </span>
                         <p className="text-xl font-black text-slate-900">
@@ -483,13 +483,13 @@ export default function PurchasePage() {
                       <div className="space-y-1">
                         <span className="text-[11px] text-slate-500">Official Merchant VPA / UPI ID:</span>
                         <div className="flex items-center gap-2">
-                          <code className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-purple-900 font-mono text-xs font-bold select-all truncate">
+                          <code className="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-blue-800 font-mono text-xs font-bold select-all truncate">
                             {upiId}
                           </code>
                           <button
                             type="button"
                             onClick={handleCopyUpi}
-                            className="p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-purple-50 text-purple-700 transition-colors"
+                            className="p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-blue-50 text-blue-600 transition-colors"
                             aria-label="Copy UPI ID"
                           >
                             {copiedUpi ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
@@ -510,7 +510,7 @@ export default function PurchasePage() {
                         <label className="text-xs font-bold text-slate-700">
                           UPI UTR / Reference ID (12 Digits)
                         </label>
-                        <span className="text-[10px] text-purple-700 font-medium">Found in your bank SMS / UPI app</span>
+                        <span className="text-[10px] text-blue-600 font-medium">Found in your bank SMS / UPI app</span>
                       </div>
                       <input
                         id="payment-utr-input"
@@ -519,7 +519,7 @@ export default function PurchasePage() {
                         onChange={(e) => setUtrNumber(e.target.value.replace(/[^0-9A-Za-z]/g, ''))}
                         placeholder="e.g. 606219483720"
                         maxLength={16}
-                        className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:bg-white focus:outline-hidden focus:border-purple-600 font-mono text-slate-800"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:bg-white focus:outline-hidden focus:border-blue-600 font-mono text-slate-800"
                       />
                     </div>
 
@@ -527,7 +527,7 @@ export default function PurchasePage() {
                     <button
                       id="completed-payment-btn"
                       type="submit"
-                      className="w-full py-4 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-lg shadow-purple-600/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+                      className="w-full py-4 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-lg shadow-blue-600/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
                     >
                       <CheckCircle2 className="w-5 h-5" />
                       I&#39;ve Completed Payment
