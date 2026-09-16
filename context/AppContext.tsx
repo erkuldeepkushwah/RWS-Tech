@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import { COURSES_DATA, Course } from '@/data/courses';
 
 export type PageView =
@@ -64,6 +65,7 @@ interface AppContextType {
   selectedCourse: Course | null;
   selectedDashboardTab: DashboardTab;
   navigateTo: (page: PageView, courseId?: string, tab?: DashboardTab) => void;
+  selectCourse: (courseId: string) => void;
   setSelectedDashboardTab: (tab: DashboardTab) => void;
 
   // Authentication
@@ -152,10 +154,44 @@ const INITIAL_PAYMENTS: PaymentRecord[] = [
   }
 ];
 
+// ---- Next.js App Router route mappings (folder-based routing) ----
+const PAGE_ROUTES: Record<PageView, string> = {
+  home: '/',
+  about: '/about',
+  courses: '/courses',
+  'course-details': '/courses',
+  contact: '/contact',
+  login: '/login',
+  register: '/register',
+  purchase: '/purchase',
+  dashboard: '/dashboard',
+  'payment-history': '/dashboard',
+  profile: '/dashboard',
+};
+
+// Derive the logical page from the current URL path.
+function pageFromPathname(pathname: string): PageView {
+  if (pathname === '/') return 'home';
+  if (pathname.startsWith('/courses/')) return 'course-details';
+  if (pathname === '/courses') return 'courses';
+  if (pathname === '/about') return 'about';
+  if (pathname === '/contact') return 'contact';
+  if (pathname === '/login') return 'login';
+  if (pathname === '/register') return 'register';
+  if (pathname === '/purchase') return 'purchase';
+  if (pathname === '/dashboard') return 'dashboard';
+  return 'home';
+}
+
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [activePage, setActivePage] = useState<PageView>('home');
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Active page is derived from the URL (Next.js App Router navigation).
+  const activePage = pageFromPathname(pathname);
+
   const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
   const [selectedDashboardTab, setSelectedDashboardTab] = useState<DashboardTab>('overview');
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(DEFAULT_USER);
@@ -236,8 +272,21 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (tab) {
       setSelectedDashboardTab(tab);
     }
-    setActivePage(page);
+
+    // Map the logical page to a real route (client-side, no full page reload).
+    let path = PAGE_ROUTES[page] ?? '/';
+    if (page === 'course-details' && courseId) {
+      const course = COURSES_DATA.find((c) => c.id === courseId || c.slug === courseId);
+      if (course) path = `/courses/${course.slug}`;
+    }
+
+    router.push(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [router]);
+
+  // Select a course without navigating (used by /courses/[slug] on direct visits).
+  const selectCourse = useCallback((courseId: string) => {
+    setSelectedCourseId(courseId);
   }, []);
 
   const selectedCourse = selectedCourseId
@@ -416,6 +465,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         selectedCourse,
         selectedDashboardTab,
         navigateTo,
+        selectCourse,
         setSelectedDashboardTab,
         currentUser,
         login,

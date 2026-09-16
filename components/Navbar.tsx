@@ -14,23 +14,21 @@ import {
   ChevronDown,
   ArrowRight
 } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Navbar() {
-  const { activePage, navigateTo, currentUser, logout } = useApp();
+  const { navigateTo, currentUser, logout } = useApp();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Home', page: 'home' as const },
-    { label: 'About', page: 'about' as const },
-    { label: 'Courses', page: 'courses' as const },
-    { label: 'Contact', page: 'contact' as const },
+    { label: 'Home', page: 'home' as const, href: '/' },
+    { label: 'About', page: 'about' as const, href: '/about' },
+    { label: 'Courses', page: 'courses' as const, href: '/courses' },
+    { label: 'Contact', page: 'contact' as const, href: '/contact' },
   ];
-
-  const handleNavClick = (page: typeof activePage) => {
-    navigateTo(page);
-    setMobileMenuOpen(false);
-  };
 
   return (
     <header
@@ -40,24 +38,25 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button
+          <Link
             id="nav-logo-btn"
-            onClick={() => handleNavClick('home')}
+            href="/"
             className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-600 rounded-lg p-1 -ml-1 transition-opacity hover:opacity-95"
             aria-label="RWS Tech Home"
           >
             <Logo size="md" />
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1.5" aria-label="Main Navigation">
             {navLinks.map((link) => {
-              const isActive = activePage === link.page;
+              const isActive =
+                link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
               return (
-                <button
+                <Link
                   key={link.page}
                   id={`nav-link-${link.page}`}
-                  onClick={() => handleNavClick(link.page)}
+                  href={link.href}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all relative ${
                     isActive
                       ? 'text-purple-900 bg-purple-100/70 font-bold'
@@ -68,7 +67,7 @@ export function Navbar() {
                   {isActive && (
                     <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-purple-600" />
                   )}
-                </button>
+                </Link>
               );
             })}
           </nav>
@@ -79,7 +78,7 @@ export function Navbar() {
               <div className="relative">
                 <button
                   id="nav-user-dropdown-btn"
-                  onClick={() => setUserDropdownOpen(!userDropdownOpen)}
+                  onClick={() => setUserDropdownOpen([userDropdownOpen)}
                   className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-purple-50 border border-slate-200 hover:border-purple-300 transition-all text-left"
                 >
                   {currentUser.avatar ? (
@@ -186,21 +185,21 @@ export function Navbar() {
               </div>
             ) : (
               <div className="flex items-center gap-2">
-                <button
+                <Link
                   id="nav-login-btn"
-                  onClick={() => handleNavClick('login')}
+                  href="/login"
                   className="px-5 py-2.5 rounded-full text-sm font-semibold text-purple-700 hover:text-purple-900 hover:bg-purple-50 transition-colors"
                 >
                   Login
-                </button>
-                <button
+                </Link>
+                <Link
                   id="nav-register-btn"
-                  onClick={() => handleNavClick('register')}
+                  href="/register"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-md shadow-purple-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </Link>
               </div>
             )}
           </div>
@@ -249,12 +248,13 @@ export function Navbar() {
         >
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => {
-              const isActive = activePage === link.page;
+              const isActive =
+                link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
               return (
-                <button
+                <Link
                   key={link.page}
                   id={`mobile-nav-link-${link.page}`}
-                  onClick={() => handleNavClick(link.page)}
+                  href={link.href}
                   className={`flex items-center justify-between w-full px-4 py-3 rounded-xl text-base font-semibold transition-colors text-left ${
                     isActive
                       ? 'bg-purple-100/70 text-purple-900 font-bold'
@@ -263,7 +263,7 @@ export function Navbar() {
                 >
                   <span>{link.label}</span>
                   {isActive && <span className="w-2 h-2 rounded-full bg-purple-600" />}
-                </button>
+                </Link>
               );
             })}
           </div>
@@ -281,14 +281,14 @@ export function Navbar() {
                   </div>
                 </div>
 
-                <button
+                <Link
                   id="mobile-drawer-dashboard-btn"
-                  onClick={() => handleNavClick('dashboard')}
+                  href="/dashboard"
                   className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-100 text-left"
                 >
                   <LayoutDashboard className="w-4 h-4 text-purple-600" />
                   Dashboard Overview
-                </button>
+                </Link>
                 <button
                   id="mobile-drawer-learning-btn"
                   onClick={() => {
@@ -336,20 +336,20 @@ export function Navbar() {
               </div>
             ) : (
               <div className="flex flex-col gap-2 pt-1">
-                <button
+                <Link
                   id="mobile-drawer-login-btn"
-                  onClick={() => handleNavClick('login')}
+                  href="/login"
                   className="w-full py-3 rounded-xl text-sm font-bold text-purple-800 bg-purple-50 hover:bg-purple-100 transition-colors"
                 >
                   Login to Account
-                </button>
-                <button
+                </Link>
+                <Link
                   id="mobile-drawer-register-btn"
-                  onClick={() => handleNavClick('register')}
+                  href="/register"
                   className="w-full py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-purple-700 to-indigo-600 shadow-md shadow-purple-600/20"
                 >
                   Register / Get Started
-                </button>
+                </Link>
               </div>
             )}
           </div>
