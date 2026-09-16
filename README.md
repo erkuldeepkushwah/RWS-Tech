@@ -23,6 +23,7 @@ Deployed on **Cloudflare Pages** (static export). Every push to the `main` branc
 | CI/CD | GitHub Actions + Wrangler | - |
 
 ### Why Static Export?
+
 The app is fully client-side (no server-side API routes), so it builds to a static site with `output: 'export'` in `next.config.ts`. This makes it:
 
 - Blazing fast (pure CDN delivery)
