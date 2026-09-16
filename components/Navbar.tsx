@@ -41,7 +41,7 @@ export function Navbar() {
           <Link
             id="nav-logo-btn"
             href="/"
-            className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-600 rounded-lg p-1 -ml-1 transition-opacity hover:opacity-95"
+            className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-600 rounded-lg p-1 -ml-1 transition-opacity hover:opacity-95"
             aria-label="RWS Tech Home"
           >
             <Logo size="md" />
@@ -59,13 +59,13 @@ export function Navbar() {
                   href={link.href}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all relative ${
                     isActive
-                      ? 'text-purple-900 bg-purple-100/70 font-bold'
-                      : 'text-slate-600 hover:text-purple-700 hover:bg-slate-100/70'
+                      ? 'text-blue-600 bg-blue-50 font-bold'
+                      : 'text-slate-600 hover:text-blue-600 hover:bg-slate-100/70'
                   }`}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-purple-600" />
+                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-blue-600" />
                   )}
                 </Link>
               );
@@ -79,17 +79,17 @@ export function Navbar() {
                 <button
                   id="nav-user-dropdown-btn"
                   onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                  className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-purple-50 border border-slate-200 hover:border-purple-300 transition-all text-left"
+                  className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all text-left"
                 >
                   {currentUser.avatar ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={currentUser.avatar}
                       alt={currentUser.name}
-                      className="w-8 h-8 rounded-full object-cover border border-purple-300"
+                      className="w-8 h-8 rounded-full object-cover border border-blue-300"
                     />
                   ) : (
-                    <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-xs">
+                    <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
                       {currentUser.name.charAt(0)}
                     </div>
                   )}
@@ -97,7 +97,7 @@ export function Navbar() {
                     <span className="text-xs font-bold text-slate-800 leading-tight max-w-[120px] truncate">
                       {currentUser.name}
                     </span>
-                    <span className="text-[10px] text-purple-600 font-medium">Student</span>
+                    <span className="text-[10px] text-blue-600 font-medium">Student</span>
                   </div>
                   <ChevronDown className="w-4 h-4 text-slate-400" />
                 </button>
@@ -124,9 +124,9 @@ export function Navbar() {
                           setUserDropdownOpen(false);
                           navigateTo('dashboard', undefined, 'overview');
                         }}
-                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-purple-700 hover:bg-purple-50 rounded-xl transition-colors text-left"
+                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors text-left"
                       >
-                        <LayoutDashboard className="w-4 h-4 text-purple-600" />
+                        <LayoutDashboard className="w-4 h-4 text-blue-600" />
                         Dashboard
                       </button>
 
@@ -136,9 +136,9 @@ export function Navbar() {
                           setUserDropdownOpen(false);
                           navigateTo('dashboard', undefined, 'my-learning');
                         }}
-                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-purple-700 hover:bg-purple-50 rounded-xl transition-colors text-left"
+                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors text-left"
                       >
-                        <BookOpen className="w-4 h-4 text-purple-600" />
+                        <BookOpen className="w-4 h-4 text-blue-600" />
                         My Learning ({currentUser.enrolledCourseIds.length})
                       </button>
 
@@ -148,9 +148,9 @@ export function Navbar() {
                           setUserDropdownOpen(false);
                           navigateTo('dashboard', undefined, 'payment-history');
                         }}
-                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-purple-700 hover:bg-purple-50 rounded-xl transition-colors text-left"
+                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors text-left"
                       >
-                        <Receipt className="w-4 h-4 text-purple-600" />
+                        <Receipt className="w-4 h-4 text-blue-600" />
                         Payment History
                       </button>
 
@@ -160,9 +160,9 @@ export function Navbar() {
                           setUserDropdownOpen(false);
                           navigateTo('dashboard', undefined, 'profile');
                         }}
-                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-purple-700 hover:bg-purple-50 rounded-xl transition-colors text-left"
+                        className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors text-left"
                       >
-                        <User className="w-4 h-4 text-purple-600" />
+                        <User className="w-4 h-4 text-blue-600" />
                         Profile Settings
                       </button>
 
@@ -188,14 +188,14 @@ export function Navbar() {
                 <Link
                   id="nav-login-btn"
                   href="/login"
-                  className="px-5 py-2.5 rounded-full text-sm font-semibold text-purple-700 hover:text-purple-900 hover:bg-purple-50 transition-colors"
+                  className="px-5 py-2.5 rounded-full text-sm font-semibold text-blue-600 hover:text-blue-800 hover:bg-blue-50 transition-colors"
                 >
                   Login
                 </Link>
                 <Link
                   id="nav-register-btn"
                   href="/register"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-md shadow-purple-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-md shadow-blue-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4" />
@@ -210,7 +210,7 @@ export function Navbar() {
               <button
                 id="mobile-user-quick-btn"
                 onClick={() => navigateTo('dashboard')}
-                className="w-9 h-9 rounded-full overflow-hidden border border-purple-400"
+                className="w-9 h-9 rounded-full overflow-hidden border border-blue-400"
                 aria-label="User Dashboard"
               >
                 {currentUser.avatar ? (
@@ -221,7 +221,7 @@ export function Navbar() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-purple-600 text-white flex items-center justify-center font-bold text-xs">
+                  <div className="w-full h-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
                     {currentUser.name.charAt(0)}
                   </div>
                 )}
@@ -231,7 +231,7 @@ export function Navbar() {
             <button
               id="mobile-hamburger-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-slate-700 hover:text-purple-700 hover:bg-slate-100 transition-colors"
+              className="p-2.5 rounded-xl text-slate-700 hover:text-blue-600 hover:bg-slate-100 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -257,12 +257,12 @@ export function Navbar() {
                   href={link.href}
                   className={`flex items-center justify-between w-full px-4 py-3 rounded-xl text-base font-semibold transition-colors text-left ${
                     isActive
-                      ? 'bg-purple-100/70 text-purple-900 font-bold'
+                      ? 'bg-blue-100/70 text-blue-800 font-bold'
                       : 'text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   <span>{link.label}</span>
-                  {isActive && <span className="w-2 h-2 rounded-full bg-purple-600" />}
+                  {isActive && <span className="w-2 h-2 rounded-full bg-blue-600" />}
                 </Link>
               );
             })}
@@ -271,13 +271,13 @@ export function Navbar() {
           <div className="border-t border-slate-200/80 pt-4 mt-2">
             {currentUser ? (
               <div className="space-y-1.5">
-                <div className="px-4 py-2 bg-purple-50 rounded-xl mb-2 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm">
+                <div className="px-4 py-2 bg-blue-50 rounded-xl mb-2 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
                     {currentUser.name.charAt(0)}
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-bold text-slate-900 truncate">{currentUser.name}</p>
-                    <p className="text-xs text-purple-700 truncate">{currentUser.email}</p>
+                    <p className="text-xs text-blue-600 truncate">{currentUser.email}</p>
                   </div>
                 </div>
 
@@ -286,7 +286,7 @@ export function Navbar() {
                   href="/dashboard"
                   className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-100 text-left"
                 >
-                  <LayoutDashboard className="w-4 h-4 text-purple-600" />
+                  <LayoutDashboard className="w-4 h-4 text-blue-600" />
                   Dashboard Overview
                 </Link>
                 <button
@@ -297,7 +297,7 @@ export function Navbar() {
                   }}
                   className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-100 text-left"
                 >
-                  <BookOpen className="w-4 h-4 text-purple-600" />
+                  <BookOpen className="w-4 h-4 text-blue-600" />
                   My Learning ({currentUser.enrolledCourseIds.length})
                 </button>
                 <button
@@ -308,7 +308,7 @@ export function Navbar() {
                   }}
                   className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-100 text-left"
                 >
-                  <Receipt className="w-4 h-4 text-purple-600" />
+                  <Receipt className="w-4 h-4 text-blue-600" />
                   Payment History
                 </button>
                 <button
@@ -319,7 +319,7 @@ export function Navbar() {
                   }}
                   className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-100 text-left"
                 >
-                  <User className="w-4 h-4 text-purple-600" />
+                  <User className="w-4 h-4 text-blue-600" />
                   Profile Settings
                 </button>
                 <button
@@ -339,14 +339,14 @@ export function Navbar() {
                 <Link
                   id="mobile-drawer-login-btn"
                   href="/login"
-                  className="w-full py-3 rounded-xl text-sm font-bold text-purple-800 bg-purple-50 hover:bg-purple-100 transition-colors"
+                  className="w-full py-3 rounded-xl text-sm font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors"
                 >
                   Login to Account
                 </Link>
                 <Link
                   id="mobile-drawer-register-btn"
                   href="/register"
-                  className="w-full py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-purple-700 to-indigo-600 shadow-md shadow-purple-600/20"
+                  className="w-full py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-blue-600 shadow-md shadow-blue-600/20"
                 >
                   Register / Get Started
                 </Link>
