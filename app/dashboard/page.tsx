@@ -61,7 +61,7 @@ export default function DashboardPage() {
     return (
       <div className="min-h-[70vh] flex items-center justify-center p-6">
         <div className="bg-white p-8 rounded-3xl border border-slate-200 text-center max-w-md space-y-4 shadow-xl">
-          <div className="w-16 h-16 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center mx-auto">
+          <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto">
             <User className="w-8 h-8" />
           </div>
           <h2 className="text-xl font-bold text-slate-900">Student Portal Sign In Required</h2>
@@ -71,7 +71,7 @@ export default function DashboardPage() {
           <div className="flex gap-2">
             <button
               onClick={() => navigateTo('login')}
-              className="flex-1 py-2.5 rounded-xl bg-purple-700 text-white text-xs font-bold hover:bg-purple-800"
+              className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-bold hover:bg-blue-700"
             >
               Sign In
             </button>
@@ -163,16 +163,16 @@ export default function DashboardPage() {
                 <img
                   src={currentUser.avatar}
                   alt={currentUser.name}
-                  className="w-8 h-8 rounded-full object-cover border border-purple-300"
+                  className="w-8 h-8 rounded-full object-cover border border-blue-300"
                 />
               ) : (
-                <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-xs">
+                <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
                   {currentUser.name.charAt(0)}
                 </div>
               )}
               <div className="hidden sm:block text-left leading-tight">
                 <span className="text-xs font-bold text-slate-900 block">{currentUser.name}</span>
-                <span className="text-[10px] text-purple-700 font-medium">{currentUser.email}</span>
+                <span className="text-[10px] text-blue-600 font-medium">{currentUser.email}</span>
               </div>
             </div>
 
@@ -209,12 +209,12 @@ export default function DashboardPage() {
                   onClick={() => setSelectedDashboardTab(tab.id)}
                   className={`w-full flex items-center justify-between px-3.5 py-3 rounded-2xl text-xs font-bold transition-all text-left ${
                     isSelected
-                      ? 'bg-purple-100/80 text-purple-900 font-extrabold shadow-2xs'
+                      ? 'bg-blue-100/80 text-blue-800 font-extrabold shadow-2xs'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className={isSelected ? 'text-purple-700' : 'text-slate-400'}>
+                    <span className={isSelected ? 'text-blue-600' : 'text-slate-400'}>
                       {tab.icon}
                     </span>
                     <span>{tab.label}</span>
@@ -225,7 +225,7 @@ export default function DashboardPage() {
                       className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
                         tab.id === 'payment-history'
                           ? 'bg-amber-100 text-amber-900 border border-amber-300'
-                          : 'bg-purple-200/70 text-purple-900'
+                          : 'bg-blue-200/70 text-blue-800'
                       }`}
                     >
                       {tab.badge}
@@ -236,8 +236,8 @@ export default function DashboardPage() {
             })}
 
             <div className="pt-4 border-t border-slate-100 px-3">
-              <div className="p-3 rounded-2xl bg-gradient-to-br from-purple-900 to-indigo-950 text-white space-y-2">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300">
+              <div className="p-3 rounded-2xl bg-gradient-to-br from-[#0B192C] to-[#081021] text-white space-y-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-blue-300">
                   RWS Tech Support
                 </span>
                 <p className="text-xs font-bold leading-tight">Need Help with Payments or Courses?</p>
@@ -257,16 +257,16 @@ export default function DashboardPage() {
             {selectedDashboardTab === 'overview' && (
               <div className="space-y-6 animate-in fade-in duration-200">
                 {/* Welcome Card */}
-                <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-950 text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0B192C] via-[#0F244E] to-[#081021] text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
                   <div className="space-y-2">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-purple-200">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-blue-200">
                       <Sparkles className="w-3.5 h-3.5 text-amber-300" />
                       Academic Term Active
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-black">
                       Welcome Back, {currentUser.name}!
                     </h2>
-                    <p className="text-xs sm:text-sm text-purple-200 max-w-lg leading-relaxed">
+                    <p className="text-xs sm:text-sm text-blue-200 max-w-lg leading-relaxed">
                       You are currently enrolled in {enrolledCourses.length} technical courses. Continue
                       where you left off to earn your accredited certificates.
                     </p>
@@ -274,9 +274,9 @@ export default function DashboardPage() {
 
                   <button
                     onClick={() => setSelectedDashboardTab('my-learning')}
-                    className="self-start md:self-auto px-6 py-3 rounded-xl bg-white hover:bg-purple-50 text-purple-900 font-bold text-xs shadow-lg transition-transform hover:scale-105 flex items-center gap-2"
+                    className="self-start md:self-auto px-6 py-3 rounded-xl bg-white hover:bg-blue-50 text-blue-800 font-bold text-xs shadow-lg transition-transform hover:scale-105 flex items-center gap-2"
                   >
-                    <PlayCircle className="w-4 h-4 text-purple-700" />
+                    <PlayCircle className="w-4 h-4 text-blue-600" />
                     Resume Learning
                   </button>
                 </div>
@@ -288,7 +288,7 @@ export default function DashboardPage() {
                     <p className="text-2xl sm:text-3xl font-black text-slate-900">
                       {enrolledCourses.length}
                     </p>
-                    <span className="text-[10px] text-purple-700 font-medium">Active Programs</span>
+                    <span className="text-[10px] text-blue-600 font-medium">Active Programs</span>
                   </div>
 
                   <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-1">
@@ -304,7 +304,7 @@ export default function DashboardPage() {
                     <p className="text-2xl sm:text-3xl font-black text-slate-900">
                       {currentUser.learningHours}h
                     </p>
-                    <span className="text-[10px] text-indigo-700 font-medium">Hands-On Code</span>
+                    <span className="text-[10px] text-blue-600 font-medium">Hands-On Code</span>
                   </div>
 
                   <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-1">
@@ -320,12 +320,12 @@ export default function DashboardPage() {
                 <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-xs space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                      <BookOpen className="w-4 h-4 text-purple-600" />
+                      <BookOpen className="w-4 h-4 text-blue-600" />
                       Current Learning Tracks
                     </h3>
                     <button
                       onClick={() => setSelectedDashboardTab('my-learning')}
-                      className="text-xs font-bold text-purple-700 hover:underline"
+                      className="text-xs font-bold text-blue-600 hover:underline"
                     >
                       View All
                     </button>
@@ -338,14 +338,14 @@ export default function DashboardPage() {
                         return (
                           <div
                             key={course.id}
-                            className="p-4 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-purple-50/40 transition-colors flex flex-col justify-between space-y-3"
+                            className="p-4 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-blue-50/40 transition-colors flex flex-col justify-between space-y-3"
                           >
                             <div className="flex items-center gap-3">
                               {/* eslint-disable-next-line @next/next/no-img-element */}
                               <img
                                 src={course.image}
                                 alt={course.title}
-                                className="w-14 h-14 rounded-xl object-cover border border-purple-200 shrink-0"
+                                className="w-14 h-14 rounded-xl object-cover border border-blue-200 shrink-0"
                               />
                               <div className="min-w-0">
                                 <h4 className="text-sm font-bold text-slate-900 truncate">{course.title}</h4>
@@ -356,11 +356,11 @@ export default function DashboardPage() {
                             <div className="space-y-1.5">
                               <div className="flex justify-between text-[11px] font-bold">
                                 <span className="text-slate-600">Progress</span>
-                                <span className="text-purple-700">{progress}%</span>
+                                <span className="text-blue-600">{progress}%</span>
                               </div>
                               <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
                                 <div
-                                  className="h-full bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"
+                                  className="h-full bg-gradient-to-r from-blue-600 to-blue-600 rounded-full"
                                   style={{ width: `${progress}%` }}
                                 />
                               </div>
@@ -368,7 +368,7 @@ export default function DashboardPage() {
 
                             <button
                               onClick={() => setActiveCourseForLearning(course)}
-                              className="w-full py-2 rounded-xl text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 transition-colors flex items-center justify-center gap-1.5"
+                              className="w-full py-2 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-1.5"
                             >
                               <PlayCircle className="w-3.5 h-3.5" />
                               Continue Learning
@@ -382,7 +382,7 @@ export default function DashboardPage() {
                       <p className="text-xs text-slate-600">You haven&#39;t enrolled in any courses yet.</p>
                       <button
                         onClick={() => setSelectedDashboardTab('available')}
-                        className="px-4 py-2 rounded-xl bg-purple-700 text-white text-xs font-bold"
+                        className="px-4 py-2 rounded-xl bg-blue-600 text-white text-xs font-bold"
                       >
                         Browse Available Courses
                       </button>
@@ -402,7 +402,7 @@ export default function DashboardPage() {
                       Click &#34;Continue Learning&#34; to open the interactive syllabus and code labs.
                     </p>
                   </div>
-                  <span className="text-xs font-bold px-3 py-1 rounded-full bg-purple-100 text-purple-800">
+                  <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-100 text-blue-700">
                     {enrolledCourses.length} Programs Enrolled
                   </span>
                 </div>
@@ -423,7 +423,7 @@ export default function DashboardPage() {
                               alt={course.title}
                               className="w-full h-full object-cover opacity-90"
                             />
-                            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-purple-900/90 text-white text-[11px] font-bold backdrop-blur-xs">
+                            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0B192C]/90 text-white text-[11px] font-bold backdrop-blur-xs">
                               {course.category}
                             </div>
                             <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-emerald-600 text-white text-[11px] font-bold">
@@ -442,11 +442,11 @@ export default function DashboardPage() {
                               <div className="pt-2 space-y-1.5">
                                 <div className="flex justify-between text-xs font-bold">
                                   <span className="text-slate-600">Course Progress</span>
-                                  <span className="text-purple-700">{progress}% Completed</span>
+                                  <span className="text-blue-600">{progress}% Completed</span>
                                 </div>
                                 <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
                                   <div
-                                    className="h-full bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full transition-all duration-500"
+                                    className="h-full bg-gradient-to-r from-blue-600 to-blue-600 rounded-full transition-all duration-500"
                                     style={{ width: `${progress}%` }}
                                   />
                                 </div>
@@ -457,7 +457,7 @@ export default function DashboardPage() {
                               <button
                                 id={`continue-learning-btn-${course.id}`}
                                 onClick={() => setActiveCourseForLearning(course)}
-                                className="flex-1 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 transition-colors flex items-center justify-center gap-2 shadow-xs"
+                                className="flex-1 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 shadow-xs"
                               >
                                 <PlayCircle className="w-4 h-4" />
                                 Continue Learning
@@ -476,14 +476,14 @@ export default function DashboardPage() {
                   </div>
                 ) : (
                   <div className="bg-white rounded-3xl border border-slate-200 p-12 text-center space-y-4">
-                    <BookOpen className="w-12 h-12 text-purple-600 mx-auto" />
+                    <BookOpen className="w-12 h-12 text-blue-600 mx-auto" />
                     <h3 className="text-lg font-bold text-slate-900">No Enrolled Courses Yet</h3>
                     <p className="text-xs text-slate-500 max-w-sm mx-auto">
                       Explore our 24 technology programs in Web Development, Programming, Mobile and AI.
                     </p>
                     <button
                       onClick={() => setSelectedDashboardTab('available')}
-                      className="px-6 py-2.5 rounded-xl bg-purple-700 text-white text-xs font-bold shadow-md hover:bg-purple-800"
+                      className="px-6 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-bold shadow-md hover:bg-blue-700"
                     >
                       Browse Available Courses
                     </button>
@@ -511,17 +511,17 @@ export default function DashboardPage() {
                   {availableCourses.map((course) => (
                     <div
                       key={course.id}
-                      className="p-5 rounded-3xl bg-white border border-slate-200 hover:border-purple-300 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4"
+                      className="p-5 rounded-3xl bg-white border border-slate-200 hover:border-blue-300 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4"
                     >
                       <div className="flex items-start gap-4">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={course.image}
                           alt={course.title}
-                          className="w-20 h-20 rounded-2xl object-cover border border-purple-200 shrink-0"
+                          className="w-20 h-20 rounded-2xl object-cover border border-blue-200 shrink-0"
                         />
                         <div className="min-w-0">
-                          <span className="text-[10px] font-bold text-purple-700 uppercase tracking-wider">
+                          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">
                             {course.category}
                           </span>
                           <h3 className="text-base font-bold text-slate-900 line-clamp-1">{course.title}</h3>
@@ -537,13 +537,13 @@ export default function DashboardPage() {
                       <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100">
                         <button
                           onClick={() => navigateTo('course-details', course.id)}
-                          className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-purple-800 bg-purple-50 hover:bg-purple-100 transition-colors"
+                          className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors"
                         >
                           View Details
                         </button>
                         <button
                           onClick={() => initiatePurchase(course.id)}
-                          className="w-full py-2 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-purple-700 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-xs transition-colors"
+                          className="w-full py-2 px-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-xs transition-colors"
                         >
                           Purchase (₹{course.fee})
                         </button>
@@ -573,7 +573,7 @@ export default function DashboardPage() {
                         onClick={() => setPaymentFilter(st)}
                         className={`px-3 py-1 rounded-lg font-bold transition-colors ${
                           paymentFilter === st
-                            ? 'bg-purple-700 text-white shadow-2xs'
+                            ? 'bg-blue-600 text-white shadow-2xs'
                             : 'text-slate-600 hover:text-slate-900'
                         }`}
                       >
@@ -584,11 +584,11 @@ export default function DashboardPage() {
                 </div>
 
                 {/* Important Notice Regarding Pending Status */}
-                <div className="p-4 rounded-2xl bg-purple-50 border border-purple-200 text-xs text-purple-950 flex items-start gap-3">
-                  <Receipt className="w-5 h-5 text-purple-700 shrink-0 mt-0.5" />
+                <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-xs text-blue-900 flex items-start gap-3">
+                  <Receipt className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                   <div className="space-y-1">
                     <span className="font-bold block">Gateway Verification Desk</span>
-                    <p className="text-[11px] leading-relaxed text-purple-800">
+                    <p className="text-[11px] leading-relaxed text-blue-700">
                       Per RWS Tech payment policy, all UPI transactions remain in <strong>Pending</strong>{' '}
                       status until reconciled with the banking network. For local testing, you may use the{' '}
                       <strong>Simulate Banking Verification</strong> controls below to test unlocking courses.
@@ -614,7 +614,7 @@ export default function DashboardPage() {
                         >
                           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                             <div className="space-y-0.5">
-                              <span className="text-[11px] font-mono text-purple-700 font-bold">
+                              <span className="text-[11px] font-mono text-blue-600 font-bold">
                                 {txn.id}
                               </span>
                               <h4 className="text-sm font-bold text-slate-900">{txn.courseName}</h4>
@@ -698,7 +698,7 @@ export default function DashboardPage() {
                   {!isEditingProfile && (
                     <button
                       onClick={() => setIsEditingProfile(true)}
-                      className="px-4 py-2 rounded-xl text-xs font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 flex items-center gap-1.5"
+                      className="px-4 py-2 rounded-xl text-xs font-bold text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 flex items-center gap-1.5"
                     >
                       <Edit2 className="w-3.5 h-3.5" />
                       Edit Details
@@ -741,7 +741,7 @@ export default function DashboardPage() {
                     <div className="flex gap-2 pt-2">
                       <button
                         type="submit"
-                        className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 flex items-center gap-1.5"
+                        className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 flex items-center gap-1.5"
                       >
                         <Save className="w-3.5 h-3.5" />
                         Save Changes
@@ -763,16 +763,16 @@ export default function DashboardPage() {
                         <img
                           src={currentUser.avatar}
                           alt={currentUser.name}
-                          className="w-20 h-20 rounded-full object-cover border-2 border-purple-300"
+                          className="w-20 h-20 rounded-full object-cover border-2 border-blue-300"
                         />
                       ) : (
-                        <div className="w-20 h-20 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-xl">
+                        <div className="w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xl">
                           {currentUser.name.charAt(0)}
                         </div>
                       )}
                       <div>
                         <h3 className="text-lg font-bold text-slate-900">{currentUser.name}</h3>
-                        <p className="text-xs text-purple-700 font-semibold">{currentUser.email}</p>
+                        <p className="text-xs text-blue-600 font-semibold">{currentUser.email}</p>
                         <p className="text-xs text-slate-500 mt-1">{currentUser.phone}</p>
                       </div>
                     </div>
