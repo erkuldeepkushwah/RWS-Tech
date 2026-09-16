@@ -32,9 +32,9 @@ export default function CoursesPage() {
   return (
     <div id="courses-view" className="space-y-12 pb-20">
       {/* Header Banner */}
-      <section className="bg-gradient-to-b from-purple-50 via-white to-slate-50 border-b border-purple-100/80 py-14">
+      <section className="bg-gradient-to-b from-blue-50 via-white to-slate-50 border-b border-blue-100/80 py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Complete Curriculum
           </div>
@@ -60,7 +60,7 @@ export default function CoursesPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search courses by name or keyword (e.g. React, MERN, Python, Docker)..."
-                className="w-full pl-11 pr-10 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-hidden focus:border-purple-600 focus:bg-white transition-all text-slate-800"
+                className="w-full pl-11 pr-10 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-hidden focus:border-blue-600 focus:bg-white transition-all text-slate-800"
               />
               {searchQuery && (
                 <button
@@ -75,7 +75,7 @@ export default function CoursesPage() {
 
             {/* Level Selector */}
             <div className="flex items-center gap-2 w-full md:w-auto">
-              <Filter className="w-4 h-4 text-purple-600 shrink-0 hidden sm:block" />
+              <Filter className="w-4 h-4 text-blue-600 shrink-0 hidden sm:block" />
               <div className="flex items-center gap-1.5 overflow-x-auto w-full">
                 {levelOptions.map((lvl) => (
                   <button
@@ -83,7 +83,7 @@ export default function CoursesPage() {
                     onClick={() => setSelectedLevel(lvl)}
                     className={`px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-colors ${
                       selectedLevel === lvl
-                        ? 'bg-purple-700 text-white shadow-xs'
+                        ? 'bg-blue-600 text-white shadow-xs'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -105,7 +105,7 @@ export default function CoursesPage() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                     isSelected
-                      ? 'bg-purple-100 text-purple-900 border border-purple-300 shadow-2xs font-extrabold'
+                      ? 'bg-blue-100 text-blue-800 border border-blue-300 shadow-2xs font-extrabold'
                       : 'bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200/80'
                   }`}
                 >
@@ -129,7 +129,7 @@ export default function CoursesPage() {
                 setSelectedCategory('All');
                 setSelectedLevel('All Levels');
               }}
-              className="text-purple-700 hover:underline font-bold"
+              className="text-blue-600 hover:underline font-bold"
             >
               Reset Filters
             </button>
@@ -145,7 +145,7 @@ export default function CoursesPage() {
           </div>
         ) : (
           <div className="bg-white rounded-3xl border border-slate-200 p-12 text-center space-y-4 max-w-md mx-auto">
-            <div className="w-14 h-14 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center mx-auto">
+            <div className="w-14 h-14 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto">
               <BookOpen className="w-7 h-7" />
             </div>
             <h3 className="text-lg font-bold text-slate-900">No Courses Match Your Query</h3>
@@ -158,7 +158,7 @@ export default function CoursesPage() {
                 setSelectedCategory('All');
                 setSelectedLevel('All Levels');
               }}
-              className="px-5 py-2.5 rounded-xl bg-purple-700 text-white text-xs font-bold hover:bg-purple-800"
+              className="px-5 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-bold hover:bg-blue-700"
             >
               Show All Courses
             </button>
