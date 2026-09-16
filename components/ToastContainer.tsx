@@ -19,14 +19,14 @@ export function ToastContainer() {
           success: <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />,
           error: <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />,
           warning: <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />,
-          info: <Info className="w-5 h-5 text-purple-600 shrink-0" />,
+          info: <Info className="w-5 h-5 text-blue-600 shrink-0" />,
         };
 
         const borderMap = {
           success: 'border-emerald-200 bg-emerald-50/95 text-emerald-950',
           error: 'border-rose-200 bg-rose-50/95 text-rose-950',
           warning: 'border-amber-200 bg-amber-50/95 text-amber-950',
-          info: 'border-purple-200 bg-purple-50/95 text-purple-950',
+          info: 'border-blue-200 bg-blue-50/95 text-blue-900',
         };
 
         return (
