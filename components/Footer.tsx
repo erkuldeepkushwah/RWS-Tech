@@ -99,7 +99,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href=\"/"
+                  href="/"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   Home
@@ -107,7 +107,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/about"
+                  href="/about"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   About Us
@@ -115,7 +115,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/courses"
+                  href="/courses"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   All Courses (24)
@@ -123,7 +123,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/contact"
+                  href="/contact"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   Contact & Support
@@ -131,7 +131,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/dashboard"
+                  href="/dashboard"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   Student Portal
@@ -148,7 +148,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href=\"/courses/full-stack-web-development"
+                  href="/courses/full-stack-web-development"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>Web Development</span>
@@ -157,7 +157,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/courses/react-js"
+                  href="/courses/react-js"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>React.js Masterclass</span>
@@ -166,7 +166,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/courses/mern-stack-development"
+                  href="/courses/mern-stack-development"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>MERN Stack</span>
@@ -175,7 +175,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/courses/full-stack-web-development"
+                  href="/courses/full-stack-web-development"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>Full Stack Development</span>
@@ -184,7 +184,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/courses/python"
+                  href="/courses/python"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>Python & Automation</span>
@@ -193,7 +193,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=\"/courses/ui-ux-design"
+                  href="/courses/ui-ux-design"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>UI/UX Design Systems</span>
@@ -238,15 +238,15 @@ export function Footer() {
 
             <div className="mt-5 pt-4 border-t border-slate-800 space-y-1.5 text-xs">
               <div className="flex items-center gap-3 text-slate-500">
-                <Link href=\"/contact\" className=\"hover:text-slate-300 transition-colors\">
+                <Link href="/contact" className="hover:text-slate-300 transition-colors">
                   Help Center
                 </Link>
                 <span>•</span>
-                <Link href=\"/contact\" className=\"hover:text-slate-300 transition-colors\">
+                <Link href="/contact" className="hover:text-slate-300 transition-colors">
                   FAQ
                 </Link>
                 <span>•</span>
-                <Link href=\"/contact\" className=\"hover:text-slate-300 transition-colors\">
+                <Link href="/contact" className="hover:text-slate-300 transition-colors">
                   Privacy Policy
                 </Link>
               </div>

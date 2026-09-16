@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'RWS Tech - Technology & Online Learning Platform',
   description:
     'Modern technology education platform offering industry-aligned courses in Web Development, Programming, App Development, Cloud, and AI with interactive curriculum and student dashboard.',
-  opengraph: {
+  openGraph: {
     title: 'RWS Tech - Technology & Online Learning Platform',
     description:
       'Modern technology education platform offering industry-aligned courses in Web Development, Programming, App Development, Cloud, and AI with interactive curriculum and student dashboard.',

@@ -78,7 +78,7 @@ export function Navbar() {
               <div className="relative">
                 <button
                   id="nav-user-dropdown-btn"
-                  onClick={() => setUserDropdownOpen([userDropdownOpen)}
+                  onClick={() => setUserDropdownOpen(!userDropdownOpen)}
                   className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-100 hover:bg-purple-50 border border-slate-200 hover:border-purple-300 transition-all text-left"
                 >
                   {currentUser.avatar ? (
