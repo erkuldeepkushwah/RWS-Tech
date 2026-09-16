@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useApp } from '@/context/AppContext';
+import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import {
   Mail,
@@ -18,26 +18,6 @@ import {
 } from 'lucide-react';
 
 export function Footer() {
-  const { navigateTo } = useApp();
-
-  const handleCourseClick = (slug: string) => {
-    // Map slug to known course id
-    const slugMap: Record<string, string> = {
-      'web-development': 'web-11',
-      'react-js': 'web-5',
-      'mern-stack': 'web-10',
-      'full-stack-development': 'web-11',
-      'python': 'prog-16',
-      'ui-ux': 'other-19',
-    };
-    const courseId = slugMap[slug];
-    if (courseId) {
-      navigateTo('course-details', courseId);
-    } else {
-      navigateTo('courses');
-    }
-  };
-
   return (
     <footer id="main-footer" className="bg-slate-950 text-slate-300 relative overflow-hidden border-t border-purple-950">
       {/* Decorative subtle purple ambient glow */}
@@ -91,7 +71,7 @@ export function Footer() {
                 </a>
                 <a
                   href="https://linkedin.com"
-                  target="_blank"
+                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="RWS Tech on LinkedIn"
                   className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-blue-600 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-all"
@@ -101,8 +81,8 @@ export function Footer() {
                 <a
                   href="https://facebook.com"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="RWS Tech on Facebook"
+                   rel="noopener noreferrer"
+                   aria-label="RWS Tech on Facebook"
                   className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-blue-700 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-all"
                 >
                   <Facebook className="w-4 h-4" />
@@ -118,44 +98,44 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <button
-                  onClick={() => navigateTo('home')}
+                <Link
+                  href=\"/"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   Home
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => navigateTo('about')}
+                <Link
+                  href=\"/about"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => navigateTo('courses')}
+                <Link
+                  href=\"/courses"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   All Courses (24)
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => navigateTo('contact')}
+                <Link
+                  href=\"/contact"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   Contact & Support
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => navigateTo('dashboard')}
+                <Link
+                  href=\"/dashboard"
                   className="text-slate-400 hover:text-purple-300 transition-colors flex items-center gap-1.5"
                 >
                   Student Portal
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -167,58 +147,58 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <button
-                  onClick={() => handleCourseClick('web-development')}
+                <Link
+                  href=\"/courses/full-stack-web-development"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>Web Development</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleCourseClick('react-js')}
+                <Link
+                  href=\"/courses/react-js"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>React.js Masterclass</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleCourseClick('mern-stack')}
+                <Link
+                  href=\"/courses/mern-stack-development"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>MERN Stack</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleCourseClick('full-stack-development')}
+                <Link
+                  href=\"/courses/full-stack-web-development"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>Full Stack Development</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleCourseClick('python')}
+                <Link
+                  href=\"/courses/python"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>Python & Automation</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => handleCourseClick('ui-ux')}
+                <Link
+                  href=\"/courses/ui-ux-design"
                   className="text-slate-400 hover:text-purple-300 transition-colors text-left flex items-center justify-between w-full group"
                 >
                   <span>UI/UX Design Systems</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-purple-400 transition-colors" />
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -258,17 +238,17 @@ export function Footer() {
 
             <div className="mt-5 pt-4 border-t border-slate-800 space-y-1.5 text-xs">
               <div className="flex items-center gap-3 text-slate-500">
-                <button onClick={() => navigateTo('contact')} className="hover:text-slate-300 transition-colors">
+                <Link href=\"/contact\" className=\"hover:text-slate-300 transition-colors\">
                   Help Center
-                </button>
+                </Link>
                 <span>•</span>
-                <button onClick={() => navigateTo('contact')} className="hover:text-slate-300 transition-colors">
+                <Link href=\"/contact\" className=\"hover:text-slate-300 transition-colors\">
                   FAQ
-                </button>
+                </Link>
                 <span>•</span>
-                <button onClick={() => navigateTo('contact')} className="hover:text-slate-300 transition-colors">
+                <Link href=\"/contact\" className=\"hover:text-slate-300 transition-colors\">
                   Privacy Policy
-                </button>
+                </Link>
               </div>
             </div>
           </div>
