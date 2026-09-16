@@ -163,7 +163,7 @@ export default function HomePage() {
 
                   <div className="absolute bottom-5 left-5 right-5 text-white">
                     <p className="text-xs font-semibold text-purple-200 uppercase tracking-wider">Live Classroom Experience</p>
-                    <p className="text-base font-bold mt-0.5">Empowering Tomorrow's Software Engineers</p>
+                    <p className="text-base font-bold mt-0.5">Empowering Tomorrow&#39;s Software Engineers</p>
                   </div>
                 </div>
 
@@ -181,7 +181,7 @@ export default function HomePage() {
                   <pre className="text-[11px] font-mono leading-tight text-purple-300">
                     <code>
                       <span className="text-pink-400">const</span> career = &#123;<br />
-                      &nbsp;&nbsp;skills: [<span className="text-emerald-300">'React'</span>, <span className="text-emerald-300">'Node'</span>],<br />
+                      &nbsp;&nbsp;skills: [<span className="text-emerald-300">&#39;React&#39;</span>, <span className="text-emerald-300">&#39;Node&#39;</span>],<br />
                       &nbsp;&nbsp;ready: <span className="text-indigo-400">true</span><br />
                       &#125;;
                     </code>
