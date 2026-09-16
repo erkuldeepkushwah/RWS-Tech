@@ -38,7 +38,7 @@ export function Logo({ className = '', size = 'md', variant = 'dark' }: LogoProp
             RWS<span className="text-blue-600">.</span>TECH
           </span>
           {/* Subtle accent chevron inspired by enterprise tech aesthetic */}
-          <span className="text-blue-600 font-mono font-bold text-xs">></span>
+          <span className="text-blue-600 font-mono font-bold text-xs">/></span>
         </div>
         <span className={`${sizeClasses.sub} ${subColor} font-semibold uppercase tracking-wider`}>
           Technology Academy
