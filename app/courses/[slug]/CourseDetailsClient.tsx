@@ -51,20 +51,20 @@ function CourseDetailsView() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => navigateTo('courses')}
-              className="flex items-center gap-1 text-slate-600 hover:text-purple-700 font-semibold"
+              className="flex items-center gap-1 text-slate-600 hover:text-blue-600 font-semibold"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               All Courses
             </button>
             <span>/</span>
-            <span className="text-purple-700 font-medium">{course.category}</span>
+            <span className="text-blue-600 font-medium">{course.category}</span>
             <span>/</span>
             <span className="text-slate-900 font-bold truncate max-w-xs">{course.title}</span>
           </div>
 
           <button
             onClick={handleShare}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 hover:border-purple-300 text-slate-600 hover:text-purple-700 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 hover:border-blue-300 text-slate-600 hover:text-blue-600 transition-colors"
           >
             <Share2 className="w-3.5 h-3.5" />
             <span>Share</span>
@@ -79,11 +79,11 @@ function CourseDetailsView() {
           <div className="lg:col-span-8 space-y-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-900">
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
                   {course.category}
                 </span>
                 {course.badge && (
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-700 to-indigo-600 text-white">
+                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 to-blue-600 text-white">
                     {course.badge}
                   </span>
                 )}
@@ -108,15 +108,15 @@ function CourseDetailsView() {
                   <span className="text-slate-500 font-normal">({course.reviewCount} reviews)</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Users className="w-4 h-4 text-purple-600" />
+                  <Users className="w-4 h-4 text-blue-600" />
                   <span>{course.studentsCount.toLocaleString()}+ students enrolled</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-purple-600" />
+                  <Clock className="w-4 h-4 text-blue-600" />
                   <span>Duration: {course.duration}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-purple-600" />
+                  <Calendar className="w-4 h-4 text-blue-600" />
                   <span>Updated 2026</span>
                 </div>
               </div>
@@ -133,7 +133,7 @@ function CourseDetailsView() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-6 right-6 text-white flex items-center justify-between">
                 <div>
-                  <span className="text-[11px] font-mono text-purple-300 uppercase tracking-wider">
+                  <span className="text-[11px] font-mono text-blue-300 uppercase tracking-wider">
                     Practical Technology Track
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold">{course.title} Comprehensive Specialization</h3>
@@ -148,14 +148,14 @@ function CourseDetailsView() {
             {/* What You Will Learn Section */}
             <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-xs space-y-6">
               <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-purple-600" />
+                <CheckCircle2 className="w-5 h-5 text-blue-600" />
                 What You Will Learn
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {course.whatYouWillLearn.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-purple-50/50 border border-purple-100/60">
-                    <CheckCircle2 className="w-4 h-4 text-purple-700 shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-blue-50/50 border border-blue-100/60">
+                    <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                     <span className="text-xs text-slate-700 leading-relaxed font-medium">{item}</span>
                   </div>
                 ))}
@@ -167,7 +167,7 @@ function CourseDetailsView() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-purple-600" />
+                    <BookOpen className="w-5 h-5 text-blue-600" />
                     Curriculum & Course Modules
                   </h3>
                   <p className="text-xs text-slate-500 mt-1">
@@ -176,7 +176,7 @@ function CourseDetailsView() {
                 </div>
                 <button
                   onClick={() => setOpenModuleIndex(openModuleIndex === null ? 0 : null)}
-                  className="text-xs font-bold text-purple-700 hover:underline"
+                  className="text-xs font-bold text-blue-600 hover:underline"
                 >
                   {openModuleIndex === null ? 'Expand All' : 'Collapse'}
                 </button>
@@ -192,10 +192,10 @@ function CourseDetailsView() {
                     >
                       <button
                         onClick={() => toggleModule(mIdx)}
-                        className="w-full p-4 text-left flex items-center justify-between hover:bg-purple-50/50 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between hover:bg-blue-50/50 transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <span className="w-7 h-7 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs">
+                          <span className="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">
                             {mIdx + 1}
                           </span>
                           <div>
@@ -205,7 +205,7 @@ function CourseDetailsView() {
                         </div>
 
                         <div className="flex items-center gap-3">
-                          <span className="text-xs font-semibold text-purple-700 bg-purple-100/80 px-2.5 py-1 rounded-full">
+                          <span className="text-xs font-semibold text-blue-600 bg-blue-100/80 px-2.5 py-1 rounded-full">
                             {module.duration}
                           </span>
                           {isOpen ? (
@@ -224,7 +224,7 @@ function CourseDetailsView() {
                               className="flex items-center justify-between text-xs py-1.5 border-b border-slate-50 last:border-0 text-slate-700"
                             >
                               <div className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                                 <span>{lesson}</span>
                               </div>
                               <span className="text-slate-400 text-[11px]">Video + Hands-on Lab</span>
@@ -241,7 +241,7 @@ function CourseDetailsView() {
             {/* Real Projects Included */}
             <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-xs space-y-6">
               <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-                <Layers className="w-5 h-5 text-purple-600" />
+                <Layers className="w-5 h-5 text-blue-600" />
                 Real-World Projects Built in this Course
               </h3>
               <p className="text-xs text-slate-600">
@@ -252,10 +252,10 @@ function CourseDetailsView() {
                 {course.projects.map((proj, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-gradient-to-b from-slate-50 to-purple-50/40 border border-slate-200 flex flex-col justify-between space-y-3"
+                    className="p-4 rounded-2xl bg-gradient-to-b from-slate-50 to-blue-50/40 border border-slate-200 flex flex-col justify-between space-y-3"
                   >
                     <div className="space-y-1">
-                      <span className="text-[10px] font-bold text-purple-700 uppercase tracking-wider">
+                      <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">
                         Capstone {idx + 1}
                       </span>
                       <h4 className="text-sm font-bold text-slate-900">{proj}</h4>
@@ -269,10 +269,10 @@ function CourseDetailsView() {
             </div>
 
             {/* Certificate Information */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-tr from-purple-950 via-slate-900 to-indigo-950 text-white shadow-xl space-y-6">
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-tr from-[#081021] via-[#0B192C] to-[#0F244E] text-white shadow-xl space-y-6">
               <div className="flex items-start justify-between">
                 <div className="space-y-2">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-800/60 border border-purple-700/60 text-xs font-bold text-purple-200">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-700/60 border border-blue-600/60 text-xs font-bold text-blue-200">
                     <Award className="w-3.5 h-3.5 text-amber-300" />
                     Accredited Credentials
                   </div>
@@ -284,7 +284,7 @@ function CourseDetailsView() {
               </div>
 
               <div className="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-2">
-                <span className="text-xs text-purple-200 font-semibold mr-2">Skills Certified:</span>
+                <span className="text-xs text-blue-200 font-semibold mr-2">Skills Certified:</span>
                 {course.certificate.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
@@ -302,10 +302,10 @@ function CourseDetailsView() {
               <img
                 src={course.instructor.avatar}
                 alt={course.instructor.name}
-                className="w-16 h-16 rounded-full object-cover border-2 border-purple-300 shrink-0"
+                className="w-16 h-16 rounded-full object-cover border-2 border-blue-300 shrink-0"
               />
               <div>
-                <span className="text-[10px] font-bold text-purple-700 uppercase tracking-wider">Your Instructor</span>
+                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Your Instructor</span>
                 <h4 className="text-base font-bold text-slate-900">{course.instructor.name}</h4>
                 <p className="text-xs text-slate-600">{course.instructor.role} • {course.instructor.company}</p>
                 <p className="text-xs text-slate-500 mt-1">Direct feedback on student pull requests and office hour mentoring.</p>
@@ -315,10 +315,10 @@ function CourseDetailsView() {
 
           {/* Right: Sticky Pricing & Purchase Card (4 cols) */}
           <div className="lg:col-span-4 sticky top-28 space-y-6">
-            <div className="bg-white rounded-3xl border-2 border-purple-200 shadow-xl p-6 sm:p-7 space-y-6">
+            <div className="bg-white rounded-3xl border-2 border-blue-200 shadow-xl p-6 sm:p-7 space-y-6">
               {/* Price Banner */}
               <div className="space-y-2">
-                <span className="text-xs font-bold text-purple-700 uppercase tracking-wider">Enrollment Fee</span>
+                <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Enrollment Fee</span>
                 <div className="flex items-baseline gap-3">
                   <span className="text-3xl sm:text-4xl font-black text-slate-900">
                     ₹{course.fee.toLocaleString()}
@@ -351,7 +351,7 @@ function CourseDetailsView() {
                   <button
                     id="details-purchase-course-btn"
                     onClick={() => initiatePurchase(course.id)}
-                    className="w-full py-3.5 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-800 hover:to-indigo-700 shadow-xl shadow-purple-600/25 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+                    className="w-full py-3.5 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 shadow-xl shadow-blue-600/25 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     <ShoppingCart className="w-4 h-4" />
                     Purchase Course Now
@@ -366,33 +366,33 @@ function CourseDetailsView() {
               <div className="pt-4 border-t border-slate-100 space-y-3 text-xs text-slate-700">
                 <p className="font-bold text-slate-900 text-xs uppercase tracking-wider">This Program Includes:</p>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                   <span>Full lifetime access to all course modules</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                   <span>3-5 Real-world production projects with code</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                   <span>Verified completion certificate with shareable link</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                   <span>Direct mentor Q&A and community access</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                   <span>Full mobile and desktop dashboard access</span>
                 </div>
               </div>
 
               {/* Guarantee Box */}
-              <div className="p-3.5 rounded-xl bg-purple-50/70 border border-purple-200/80 text-xs text-purple-900 flex items-start gap-2.5">
-                <HelpCircle className="w-4 h-4 text-purple-700 shrink-0 mt-0.5" />
+              <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-800 flex items-start gap-2.5">
+                <HelpCircle className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold block">100% Practical Guarantee</span>
-                  <span className="text-[11px] text-purple-700 leading-tight">
+                  <span className="text-[11px] text-blue-600 leading-tight">
                     Gain genuine coding proficiency with support from RWS Tech instructors.
                   </span>
                 </div>
